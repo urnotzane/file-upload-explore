@@ -1,0 +1,32 @@
+<html>
+  <head> </head>
+  <body>
+    <input
+      id="input"
+      onchange="handleChange(this)"
+      type="file"
+      name="file2"
+      value="请选择文件"
+    /><br />
+    <button onclick="onSubmit()">提交</button>
+    <script>
+      function handleChange(e) {
+        console.log(e);
+      }
+      function onSubmit() {
+        const file = document.getElementById("input").files[0];
+        const xhr = new XMLHttpRequest();
+        const fd = new FormData();
+        fd.append("file", file);
+        xhr.open("POST", "/upload", true);
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState == 4 && xhr.status == 200) {
+            alert(xhr.responseText);
+          }
+        };
+
+        xhr.send(fd);
+      }
+    </script>
+  </body>
+</html>

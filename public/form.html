@@ -1,0 +1,20 @@
+
+<html>
+  <head> </head>
+  <body>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+      <input
+        onchange="handleChange(this)"
+        type="file"
+        name="file1"
+        value="请选择文件"
+      /><br />
+      <input type="submit" />
+    </form>
+    <script>
+      function handleChange(e) {
+        console.log(e);
+      }
+    </script>
+  </body>
+</html>
