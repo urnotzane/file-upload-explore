@@ -151,5 +151,6 @@ form表单上传文件需要设置form标签的以下几个属性：
 
 它的接收和保存和form表单是一样的。
 
+**【注】以上所有代码均已上传至github，地址：[file-upload-explore](https://github.com/urnotzane/file-upload-explore)**
 ## 参考
 * [揭秘前端文件上传原理（一）](https://blog.csdn.net/qq_27053493/article/details/100589143)
