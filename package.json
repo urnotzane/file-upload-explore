@@ -1,0 +1,27 @@
+{
+  "name": "file-upload-explore",
+  "version": "1.0.0",
+  "description": "> 前端发展如此之快，使得业务开发无需学习底层原理，直接使用现成的框架或工具就可以直接进入开发，虽然这极大地提高了开发速度，但正所谓万变不离其宗，对于开发者来说理解其原理才会在技术上有长久稳定的发展，最近开发涉及到了文件上传相关的东西，想到自己平时开发都是直接用别人的SDK，原理和具体过程什么的都不了解，感觉迷迷糊糊莫名其妙的就把文件传上去了，可以说是两眼一抹黑了，本文就此次对文件上传的研究，做一些小小的记录。",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/urnotzane/file-upload-explore.git"
+  },
+  "keywords": [
+    "node",
+    "javascript"
+  ],
+  "author": "urnotzane",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/urnotzane/file-upload-explore/issues"
+  },
+  "homepage": "https://github.com/urnotzane/file-upload-explore#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
