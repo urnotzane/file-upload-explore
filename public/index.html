@@ -33,9 +33,14 @@
       function onSubmit() {
         const file = document.getElementById("input").files[0];
         console.log(file);
-        const xhr = new XMLHttpRequest();
         const fd = new FormData();
         fd.append("file", file);
+        postFile(fd);
+        putFile(file);
+      }
+      // formData上传
+      function postFile(fd) {
+        const xhr = new XMLHttpRequest();
         xhr.open("POST", "/upload", true);
         xhr.onreadystatechange = function () {
           if (xhr.readyState == 4 && xhr.status == 200) {
@@ -45,6 +50,17 @@
         console.log(fd);
 
         xhr.send(fd);
+      }
+      // request body上传
+      function putFile(body) {
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "/upload", true);
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState == 4 && xhr.status == 200) {
+            alert(xhr.responseText);
+          }
+        };
+        xhr.send(body);
       }
     </script>
   </body>

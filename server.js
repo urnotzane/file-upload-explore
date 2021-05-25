@@ -8,8 +8,7 @@ const host = "127.0.0.1";
 // 托管静态文件，HTML文件在这个文件夹里
 app.use(express.static("public"));
 
-// 文件上传的api地址
-app.post("/upload", function (req, res) {
+const uploadCb = (req, res) => {
   let file = null;
   req.on("data", (buffer) => {
     file = buffer;
@@ -24,7 +23,11 @@ app.post("/upload", function (req, res) {
     res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
     res.end("上传完成");
   });
-});
+};
+
+// 文件上传的api地址
+app.post("/upload", uploadCb);
+app.put("/upload", uploadCb);
 
 app.listen(port, host, () => {
   console.log(`http://${host}:${port}`);
